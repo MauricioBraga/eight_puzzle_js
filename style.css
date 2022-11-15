@@ -1,0 +1,131 @@
+body  {
+    
+}
+
+table.tabela_nome {
+    border: 20px;
+
+}
+
+table.tabela_nome td {
+    /* background: #dcdcdc;  */
+    font-family:'Cambria';
+    font-size:100px;
+    
+}
+
+#tabela_nome_8  {
+    color:red;
+}
+
+#tabela_nome_P  {
+    color: green;
+}
+
+#tabela_nome_U  {
+    color: blue;
+}
+
+#tabela_nome_Z1  {
+    color: yellow;
+}
+
+#tabela_nome_Z2  {
+    color: red;
+}
+
+#tabela_nome_L  {
+    color: black;
+}
+
+
+#tabela_nome_E  {
+    color: purple;
+}
+
+#tabela_nome_2  {
+    color:red
+}
+
+
+.tabuleiro  {
+ 	align: center;
+	background-color: gray;
+
+	
+}
+
+table.tabuleiro td {
+ font-family: Cambria, Arial;
+ text-align: center;
+ font-size:60px;
+
+ color:white;
+	
+
+}
+
+table.tabuleiro.celula_1  {
+background-color: orange;
+}
+
+table.tabuleiro.celula_2  {
+background-color: red;
+}
+
+table.tabuleiro.celula_3  {
+background-color: purple;
+}
+
+table.tabuleiro.celula_4  {
+background-color: green;
+}
+
+table.tabuleiro.celula_5  {
+background-color: black;
+}
+
+table.tabuleiro.celula_6  {
+background-color: pink;
+}
+
+table.tabuleiro.celula_7  {
+background-color: blue;
+}
+
+table.tabuleiro.celula_8  {
+background-color: blue;
+}
+
+table.tabuleiro.celula_9  {
+background-color: #A8A8A8;
+}
+
+
+#btnNovoJogo  {
+	font-family:'Cambria';
+	font-size:40px;
+	color:blue;
+}
+
+#resultado  {
+	font-family:'Cambria';
+	font-size:40px;
+	color:red;
+}
+
+#frmSetup  {
+	font-family:'Cambria';
+	font-size:30px;
+	color:blue;
+}
+
+
+
+
+
+form.frmJogo  {
+ text-align: center;
+    border: 1px;
+
+}
