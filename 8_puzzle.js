@@ -178,15 +178,8 @@ function checaControles(tecla){
 
 function atualiza_tabuleiro(jogada_realizada)  {
 
-		if ( (jogada_realizada < 1) || (jogada_realizada > 8) )  {
-			jogada_valida = 0;	
-			return jogada_valida; 
-		}
 		a = 0;
 		b = 0;
-
-		// se o cara fizer um lance inválido, jogada_valida = 0;
-		jogada_valida = 1;
 
 		// localiza o valor que será movido, e 	
 		// guarda a posição dele em a e b.
@@ -199,28 +192,18 @@ function atualiza_tabuleiro(jogada_realizada)  {
 				}
 			}
 		}
+		temp = tabuleiro[x_branco][y_branco];
+		tabuleiro[x_branco][y_branco] = tabuleiro[a][b];
+		tabuleiro[a][b] = temp;
+		// salva a nova posição do branco
+		x_branco = a;
+		y_branco = b;
+		movimento = movimento + 1;
+		preenche_tabuleiro();
+		solucao = verifica_se_ganhou();
+		imprime_vitoria(solucao);     
+                document.getElementById("jogadas_realizadas").innerHTML = "movimentos: "+movimento;
 
-		// verifica se a jogada é válida e se for, executa a jogada.
-		if ((Math.abs(x_branco-a) + Math.abs(y_branco-b)) > 1)  {
-			// jogada inválida.
-			jogada_valida = 0;
-			return jogada_valida;
-		}
-		else  {  	// jogada válida.
-			temp = tabuleiro[x_branco][y_branco];
-			tabuleiro[x_branco][y_branco] = tabuleiro[a][b];
-			tabuleiro[a][b] = temp;
-			// salva a nova posição do branco
-			x_branco = a;
-			y_branco = b;
-			movimento = movimento + 1;
-			preenche_tabuleiro();
-			solucao = verifica_se_ganhou();
-			imprime_vitoria(solucao);     
-	                document.getElementById("jogadas_realizadas").innerHTML = "movimentos: "+movimento;
-
-		}
-		return jogada_valida;
 }
 
 function embaralha_tabuleiro()  {
