@@ -1,131 +1,111 @@
-body  {
-    
+div {
+    width: 500px;
+    margin: 0 auto;
 }
-
-table.tabela_nome {
-    border: 20px;
-
+#titulo {
+    font-family: 'Cambria';
+    font-size: 100px;
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
 }
-
-table.tabela_nome td {
-    /* background: #dcdcdc;  */
-    font-family:'Cambria';
-    font-size:100px;
-    
+#numero_8 {
+    color: red;
+    padding-right: 50px;
 }
-
-#tabela_nome_8  {
-    color:red;
-}
-
-#tabela_nome_P  {
+#letra_P {
     color: green;
 }
-
-#tabela_nome_U  {
+#letra_U {
     color: blue;
 }
-
-#tabela_nome_Z1  {
+#letra_Z1 {
     color: yellow;
 }
-
-#tabela_nome_Z2  {
+#letra_Z2 {
     color: red;
 }
-
-#tabela_nome_L  {
+#letra_L {
     color: black;
 }
 
-
-#tabela_nome_E  {
+#letra_E {
     color: purple;
 }
-
-#tabela_nome_2  {
-    color:red
+#tabela_central {
+    border-spacing: 30px;
+    border-collapse: separate;
 }
-
-
-.tabuleiro  {
- 	align: center;
-	background-color: gray;
-
-	
+.coluna_vazia {
+    width: 50px;
 }
-
-table.tabuleiro td {
- font-family: Cambria, Arial;
- text-align: center;
- font-size:60px;
-
- color:white;
-	
-
+.tabuleiro {
+    align: center;
+    background-color: gray;
+    border: 1px solid black;
+    border-spacing: 20px;
+    border-style: outset;   }
+    .tabuleiro td {
+        font-family: Cambria, Arial;
+        text-align: center;
+        font-size: 60px;
+        border: 1px solid black;
+        color: white;
+        padding: 20px;
+        font-weight: bold;
+        border-style: outset;
+    }
+#celula_1 {
+        background-color: orange;
 }
-
-table.tabuleiro.celula_1  {
-background-color: orange;
+#celula_2 {
+        background-color: red;
 }
-
-table.tabuleiro.celula_2  {
-background-color: red;
+#celula_3 {
+        background-color: purple;
 }
-
-table.tabuleiro.celula_3  {
-background-color: purple;
+#celula_4 {
+        background-color: green;
 }
-
-table.tabuleiro.celula_4  {
-background-color: green;
+#celula_5 {
+        background-color: black;
 }
-
-table.tabuleiro.celula_5  {
-background-color: black;
+#celula_6 {
+        background-color: pink;
 }
-
-table.tabuleiro.celula_6  {
-background-color: pink;
+#celula_7 {
+        background-color: blue;
 }
-
-table.tabuleiro.celula_7  {
-background-color: blue;
+#celula_8 {
+        background-color:yellow;
 }
-
-table.tabuleiro.celula_8  {
-background-color: blue;
+#celula_9 {
+        background-color: #A8A8A8;
 }
-
-table.tabuleiro.celula_9  {
-background-color: #A8A8A8;
+#btnNovoJogo {
+        font-family: 'Cambria';
+        font-size: 40px;
+        color: blue;
 }
-
-
-#btnNovoJogo  {
-	font-family:'Cambria';
-	font-size:40px;
-	color:blue;
+#resultado {
+        font-family: 'Cambria';
+        font-size: 40px;
+        color: red;
+        font-weight: bold;   
 }
-
-#resultado  {
-	font-family:'Cambria';
-	font-size:40px;
-	color:red;
+#frmSetup {
+            font-family: 'Cambria';
+            font-size: 30px;
+            color: blue;
 }
-
-#frmSetup  {
-	font-family:'Cambria';
-	font-size:30px;
-	color:blue;
+        
+form.frmJogo {
+            text-align: center;
+            border: 1px;
 }
-
-
-
-
-
-form.frmJogo  {
- text-align: center;
-    border: 1px;
-
+         
+#jogadas_realizadas  {
+            width: 300px;
 }
+                    
