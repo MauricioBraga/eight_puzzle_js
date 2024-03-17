@@ -13,55 +13,37 @@ window.onload = function () {
 }
 
 function nova_partida() {
-    movimento = 0;
-    // coordenadas do branco
-    x_branco = 0;
-    y_branco = 0;
-    document.getElementById("resultado").innerHTML = "<strong>Dificuldade";
-    if (frmSetup.dificuldade.value == 'D') {
-        dificuldade = 100;
-    }
-    else if (frmSetup.dificuldade.value == 'N') {
-        dificuldade = 50;
-    }
-
-    else {
-        dificuldade = 5;
-    }
-
     inicializa_variaveis();
     embaralha_tabuleiro();
 }
 
 function inicializa_variaveis() {
-    movimento = 0;
-    document.getElementById("jogadas_realizadas").innerHTML = "movimentos: " + movimento;
-    // coordenadas do branco
-    x_branco = 0;
-    y_branco = 0;
-
+    document.getElementById("resultado").innerHTML = "<strong>Dificuldade";
+    
+    if (frmSetup.dificuldade.value == "D") {
+      dificuldade = 100;
+    } else if (frmSetup.dificuldade.value == "N") {
+      dificuldade = 50;
+    } else {
+      dificuldade = 5;
+    }
+    
     matriz_cores[0] = ["#FF8000", "#CC0000", "#660066"];
     matriz_cores[1] = ["#009900", "#000000", "#FF66FF"];
     matriz_cores[2] = ["#66FF66", "#0000CC", "#A8A8A8"];
 
-
     cores = ["#FF8000", "#CC0000", "#660066", "#009900", "#000000", "#FF66FF", "#66FF66", "#0000CC", "#A8A8A8"];
-    tabuleiro[0] = [0, 0, 0];
-    tabuleiro[1] = [0, 0, 0];
-    tabuleiro[2] = [0, 0, 0];
-    k = 0;
-    // preenche o tabuleiro já solucionado.
-    for (let i = 0; i < tabuleiro.length; i++) {
-        for (let j = 0; j < tabuleiro[i].length; j++) {
-            k++;
-            tabuleiro[i][j] = k;
-        }
-    }
-
+    
+    tabuleiro[0] = [1, 2, 3];
+    tabuleiro[1] = [4, 5, 6];
+    tabuleiro[2] = [7, 8, 9];
+    
     // guarda a posição inicial do branco (valor 9)
     x_branco = 2;
     y_branco = 2;
     movimento = 0;
+
+    document.getElementById("jogadas_realizadas").innerHTML = "movimentos: " + movimento;
 
 }
 
@@ -94,7 +76,7 @@ function verifica_se_ganhou() {
     for (i = 0; i < tabuleiro.length; i++) {
         for (j = 0; j < tabuleiro[i].length; j++) {
             k = k + 1;
-            if (tabuleiro[i][j] != k) // não venceu, sol = 0;
+            if (tabuleiro[i][j] != k) // não venceu, solucao = 0;
                 solucao = 0;
         }
     }
@@ -111,7 +93,7 @@ function imprime_vitoria(solucao) {
 
 function checaControles(tecla) {
     if (tecla == 37) {
-        // "esquerda "
+        // "esquerda"
         if ((y_branco + 1 >= 0) && (y_branco + 1 <= 2)) {
             numero = tabuleiro[x_branco][y_branco + 1];
             atualiza_tabuleiro(numero);
